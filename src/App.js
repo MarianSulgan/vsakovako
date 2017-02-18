@@ -1,20 +1,34 @@
+/*
+App.js 
+ */
+
 // @flow
 
 import React, { Component } from 'react';
-import './App.css';
-import Board from './Board';
+import { Grid, Row, Col } from 'react-bootstrap';
+import {push as Menu} from 'react-burger-menu';
+
+import Canvas from './Canvas';
 
 class App extends Component {
+
   render() {
+
     return (
-      <div className="game">
-          <div className="game-board">
-            <Board />
-          </div>
-          <div className="gameInfo">
-            <div></div>
-            <ol></ol>
-          </div>
+      <div id="outer-container">
+        <Menu outer pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } >
+          <a id="home" className="menu-item" href="#">Home</a>
+          <a id="about" className="menu-item" href="#">About</a>
+          <a id="contact" className="menu-item" href="#">Contact</a>
+        </Menu>
+        <Grid fluid id="page-wrap">
+          <h1 className="pull-right">všakovako generátor</h1>
+          <Row className="full-height">
+            <Col xs={12} className="height-80">
+              <Canvas/>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }

@@ -1,50 +1,84 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
 }
 
-ol, ul {
-  padding-left: 30px;
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
 }
 
-.status {
-  margin-bottom: 10px;
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
 }
 
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
 }
 
-.square:focus {
-  outline: none;
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
 }
 
-.kbd-navigation .square:focus {
-  background: #ddd;
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.game-info {
-  margin-left: 20px;
+.menu-item {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 2em;
+    color: #ccc;
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      color: #888;
+    }
+}
+
+#myCanvas {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #373a47;
+  margin-top: 10px;
+}
+
+.canvas-container {
+  padding-left: 21px;
+  height: 100%;
+}
+
+html, body, #root, #outer-container, #page-wrap {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.height-80 {
+  height: 80%;
 }
