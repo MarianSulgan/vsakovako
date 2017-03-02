@@ -59,11 +59,14 @@
     }
 }
 
-#myCanvas {
-  width: 100%;
-  height: 100%;
+canvas {
   border: 5px solid #373a47;
   margin-top: 10px;
+  margin-left: 20px;
+}
+
+.bordered-container {
+  border: 5px solid #373a47;
 }
 
 .canvas-container {

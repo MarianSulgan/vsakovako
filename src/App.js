@@ -6,7 +6,7 @@ App.js
 
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import {push as Menu} from 'react-burger-menu';
+import { push as Menu } from 'react-burger-menu';
 
 import Canvas from './Canvas';
 
@@ -23,9 +23,13 @@ class App extends Component {
         </Menu>
         <Grid fluid id="page-wrap">
           <h1 className="pull-right">všakovako generátor</h1>
-          <Row className="full-height">
-            <Col xs={12} className="height-80">
-              <Canvas/>
+          <Row className="">
+            <Col xs={ 12 } className="">
+              <Canvas 
+                ref={ (c) => this.canvas = c } 
+                width={ 700 } 
+                height={ 700 } 
+              />
             </Col>
           </Row>
         </Grid>
