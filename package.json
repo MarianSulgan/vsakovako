@@ -6,17 +6,15 @@
     "flow-bin": "^0.39.0",
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.1",
+    "postcss-scss": "^0.4.1",
     "react-scripts": "0.9.0"
   },
   "dependencies": {
-    "file-save": "^0.2.0",
     "file-saver": "^1.3.3",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-burger-menu": "^1.10.12",
     "react-dom": "^15.4.2",
-    "react-fabricjs": "^0.1.6",
-    "react-file-download": "^0.3.2",
     "react-sidebar": "^2.3.0"
   },
   "scripts": {

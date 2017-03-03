@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import paper from 'paper';
 import FileSaver from 'file-saver';
 
+import '../css/Canvas.css';
+
 class Canvas extends Component {
 
     // constructor(props) {
