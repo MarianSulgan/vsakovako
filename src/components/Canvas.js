@@ -43,7 +43,7 @@ class Canvas extends Component {
             segments: true,
             stroke: true,
             fill: true,
-            tolerance: 5
+            tolerance: 10
         };
 
         paper.view.draw();
