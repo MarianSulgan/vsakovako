@@ -1,1 +1,9 @@
 $text-color: #333;
+
+@mixin remove-effects {
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}

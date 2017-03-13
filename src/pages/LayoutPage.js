@@ -1,9 +1,14 @@
+/**
+ * Layout Page
+ * 
+ * Page where user selects layout options for generator.
+ */
 
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router';
 
-import Layout from './Layout';
+import Layout from '../components/Layout';
 
 class LayoutPage extends Component {
 
@@ -11,7 +16,7 @@ class LayoutPage extends Component {
         return (
             <Layout fluid={ false }>
                 <Row className="top-buffer text-center">
-                    <h2>No a voľajaký ornament k tomu pre začiatok!</h2>
+                    <h2>Vyberaj zaraz dajaký layout</h2>
                 </Row>
                 <Row className="top-buffer">
                     <Col xs={ 12 } sm={ 4 }>
@@ -47,8 +52,8 @@ class LayoutPage extends Component {
                 </Row>
                 <Row className="top-buffer text-center">
                     <Col xs={ 12 }>
-                        <Link to="/editor">
-                            <Button bsStyle="primary" bsSize="large">Dóóbre</Button>
+                        <Link to="/pick-pattern-option">
+                            <Button bsStyle="primary" bsSize="large">Ókej</Button>
                         </Link>
                     </Col>
                 </Row>

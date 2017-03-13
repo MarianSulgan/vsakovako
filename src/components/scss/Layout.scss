@@ -27,7 +27,7 @@ a.unstyled {
     margin-bottom: 20px;
 }
 
-.back-button {
+#backButton {
 
     background: transparent;
     border: none;
@@ -37,8 +37,7 @@ a.unstyled {
     padding: 0;
 
     &:hover, &:focus, &:active {
-        text-decoration: none;
-        background: transparent;
         color: #888;
+        @include remove-effects();
     }
 }

@@ -1,5 +1,7 @@
-/*
-Index Page
+/**
+ * Index Page
+ * 
+ * Landing page of the application.
  */
 
 import React, { Component } from 'react';
@@ -21,14 +23,16 @@ class IndexPage extends Component {
                 </Jumbotron>
                 <Row className="top-buffer">
                     <Col xs={ 12 }>
-                        <Link to="/pick-layout-option">
+                        <Link to="/pick-application-option">
                             <Button bsStyle="primary" bsSize="large">Chcem tvoriť</Button>
                         </Link>
                     </Col>
                 </Row>
                 <Row className="top-buffer">
                     <Col xs={ 12 }>
-                        <Button bsStyle="default" bsSize="large">Čo vytvorili iní</Button>
+                        <Link to="/showcase">
+                            <Button bsStyle="default" bsSize="large">Čo vytvorili iní</Button>
+                        </Link>
                     </Col>
                 </Row>
             </Grid>
