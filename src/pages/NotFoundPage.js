@@ -1,3 +1,8 @@
+/**
+ * Not found Page
+ * 
+ * Notoriously famous 404 error page.
+ */
 
 import React, { Component } from 'react';
 import { Link } from 'react-router';

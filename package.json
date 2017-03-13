@@ -15,7 +15,11 @@
     "react-bootstrap": "^0.30.7",
     "react-burger-menu": "^1.10.12",
     "react-dom": "^15.4.2",
-    "react-sidebar": "^2.3.0"
+    "react-resize-detector": "^0.3.3",
+    "react-sidebar": "^2.3.0",
+    "react-typography": "^0.15.0",
+    "typography": "^0.15.8",
+    "typography-theme-parnassus": "^0.15.1"
   },
   "scripts": {
     "start-js": "react-scripts start",
