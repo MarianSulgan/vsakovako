@@ -1,10 +1,30 @@
 
 /* Variables */
 
+@import 'bootstrap-variables.scss';
+@import 'typography.scss';
+@import 'variables.scss';
+
 $menu-top-margin: 30px;
 
 @mixin border-container {
   border: 5px solid #373a47;
+}
+
+@mixin before-triangle {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    margin-left: -50px;
+    margin-top: -15px;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 50px 50px;
+    border-color: transparent transparent #337ab7 transparent;
 }
 
 html, body, #root, #outerContainer {
@@ -23,8 +43,140 @@ html, body, #root, #outerContainer {
   height: 80%;
 }
 
-body {
-  background: url('../static/img/background.png') repeat;
+.navbar {
+  margin-bottom: 0;
+}
+
+.footer-binder {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background: $brand-primary;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  position: relative;
+
+  &::before{
+    @include before-triangle();
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.6em;
+
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+    }
+  }
+
+  .row {
+    margin-top: 1.6em;
+  }
+}
+
+section {
+  @media (max-width: $screen-xs-max) {
+    padding-top: 2em;
+  }
+}
+
+.full-section {
+  height: 100vh;
+  width: 100%;
+  // border-bottom: 2px solid #000;
+  padding-top: 1.6 * 5em;
+}
+
+#showcaseSection {
+  height: calc(100vh - 1em);
+}
+
+.misc-pages-section {
+  padding-top: 8em;
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: 2em;
+  }
+}
+
+.misc-sidemenu {
+  padding-top: 8em;
+  line-height: 1.6em;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+}
+
+.content > .container {
+  padding-top: 8em;
+}
+
+section:nth-child(even) {
+  background-color: $gray-lighter;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.image-container {
+  max-width: 50rem;
+  margin: 0 auto;
+
+  img {
+    margin: 10px 0;
+  }
+}
+
+.folk-illustration {
+  img {
+    margin: auto;
+    margin-top: 6.4rem;
+    opacity: 0.5;
+  }
+}
+
+/* Buttons */
+
+.vv-button {
+  min-width: 250px;
+}
+
+.scroll-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -26px;
+  @include remove-effects();
+
+  .glyphicon {
+    font-size: 1.6em;
+  }
 }
 
 /* Misc */
@@ -33,14 +185,14 @@ body {
   text-transform: uppercase;
 }
 
-.top-buffer {
-  margin-top: 20px;
-}
-
 .transparent {
   background-color: transparent;
 }
 
 .svg-pattern-elem:hover {
   fill: #111;
+}
+
+.semi-transparent {
+  opacity: 0.6;
 }

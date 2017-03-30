@@ -9,25 +9,27 @@
 // @flow
 
 import React, { Component } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Grid } from 'react-bootstrap';
 
-import SVGCanvas from '../components/SVGCanvas';
+// import SVGCanvas from '../components/SVGCanvas';
 import Layout from '../components/Layout';
 
 class App extends Component {
 
   render() {
 
-    let options = {
-      w: 100,
-      h: 100
-    };
+    // let options = {
+    //   w: 100,
+    //   h: 100
+    // };
 
     return (
-      <Layout fluid={ true }>
-          <Row className="height-80">
-            <SVGCanvas options={ options } />
+      <Layout>
+        <Grid>
+          <Row>
+            {/*<SVGCanvas options={ options } />*/}
           </Row>
+        </Grid>
       </Layout>
     );
   }
