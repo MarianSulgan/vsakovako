@@ -24,7 +24,7 @@ class App extends Component {
     // };
 
     return (
-      <Layout>
+      <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
         <Grid>
           <Row>
             {/*<SVGCanvas options={ options } />*/}

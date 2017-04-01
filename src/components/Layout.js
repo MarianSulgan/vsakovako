@@ -7,30 +7,28 @@
  * @todo: uninstall 'react-burger-menu'
  */
 
-
 import React, { Component } from 'react';
-// import { push as Menu } from 'react-burger-menu';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-// import '../css/Layout.css';
-
-/**
- * See typography.js from more info on usage.
- */
-// import { TypographyStyle } from 'react-typography';
-// import typography from './typography';
-
 class Layout extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            defaultLang: "sk",
+            langs: ["sk", "en"]
+        }
+    }
 
     render() {
         return(
             <div className="main-container footer-binder">
-                
-                <Navigation />
 
-                <div className="content">
+                <Navigation onLangChange={ this.props.onLangChange } lang={ this.props.lang } />
+
+                <div className={ this.props.className ? `content ${this.props.className}` : "content" } id={ this.props.id }>
                     {this.props.children}
                 </div>
 

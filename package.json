@@ -14,8 +14,12 @@
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
+    "react-fontawesome": "^1.5.0",
+    "react-localization": "0.0.13",
     "react-resize-detector": "^0.3.3",
     "react-router-bootstrap": "^0.23.1",
+    "react-router-transition": "0.0.6",
+    "react-router-transitions": "^2.2.1",
     "react-sidebar": "^2.3.0"
   },
   "scripts": {

@@ -6,7 +6,7 @@
  */
 
 import React, { Component } from 'react';
-import { Row, Grid } from 'react-bootstrap';
+import { Row, Grid, Image } from 'react-bootstrap';
 
 import Layout from '../components/Layout';
 
@@ -14,13 +14,16 @@ class ApplicationPage extends Component {
     state = {  }
     render() {
         return (
-            <Layout>
-                <Grid>
+            <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
+                <Grid id="styleguidePage">
                     <Row>
                         <h1>Styleguide</h1>
                         <p>
                             Toto je grafický manuál k projektu všakovako. Čekuj.
                         </p>
+                    </Row>
+                    <Row className="image-container">
+                        <Image src="http://placehold.it/350x150" responsive />
                     </Row>
                 </Grid>
             </Layout>

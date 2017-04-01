@@ -14,10 +14,12 @@ import { Grid, Row, Button, Glyphicon, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router';
 import scrollIntoView from 'scroll-into-view';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
+import strings from '../translations.js';
 
 import '../css/IndexPage.css';
+
+// import { withLanguage } from '../components/withLanguage';
 
 class IndexPage extends Component {
 
@@ -30,14 +32,11 @@ class IndexPage extends Component {
 
     render() {
         return (
-            <div className="main-container footer-binder">
-                
-                <Navigation />
-
+            <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang } id="homePage">
                 <section id="welcomeSection" className="full-section">
                     <Grid fluid className="content">
                         <Row>
-                            <h1>Ľudový generátor vzorov. A obchod.</h1>
+                            <h1>{ strings.h1_home }</h1>
                             <p>
                                 Folklór a ľudový ornament roky upadal do zabudnutia. Dnes sa však vracia. 
                                 Všakovako ho všakovako prináša do digitálneho prostredia a spája prvky 
@@ -83,10 +82,7 @@ class IndexPage extends Component {
                         </Row>
                     </Grid>
                 </section>
-
-                <Footer/>
-                
-            </div>
+            </Layout>
         );
   }
 }

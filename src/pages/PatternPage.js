@@ -14,7 +14,7 @@ class LayoutPage extends Component {
 
     render() {
         return (
-            <Layout>
+            <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
                 <Grid>
                     <Row className="">
                         <h1>No a voľajaký ornament k tomu pre začiatok!</h1>

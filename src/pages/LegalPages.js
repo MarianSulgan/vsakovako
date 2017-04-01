@@ -24,14 +24,14 @@ let legalPagesContent = {
 
 class ConditionsPage extends Component {
     render() {
-        return <FooterPageTemplate content={ legalPagesContent["conditionsPage"] }/>
+        return <FooterPageTemplate content={ legalPagesContent["conditionsPage"] } onLangChange={ this.props.onLangChange } lang={ this.props.lang }/>
     }
 }
 
 class PrivacyPage extends Component {
     render() {
         return (
-            <FooterPageTemplate content={ legalPagesContent["privacyPage"] }>
+            <FooterPageTemplate content={ legalPagesContent["privacyPage"] } onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
                 <h1>Ochrana veľmi osobných údajov</h1>
                 <p>Lorem ipsum salam.</p>
                 <p><strong>THIS IS SPARTA!</strong> Príklad, ako vložiť obsah cez <code>this.props.children</code>. Dík.</p>
@@ -42,25 +42,25 @@ class PrivacyPage extends Component {
 
 class ReturnPage extends Component {
     render() {
-        return <FooterPageTemplate content={ legalPagesContent["returnPage"] }/>
+        return <FooterPageTemplate content={ legalPagesContent["returnPage"] } onLangChange={ this.props.onLangChange } lang={ this.props.lang }/>
     }    
 }
 
 class HowToShopPage extends Component {
     render() {
-        return <FooterPageTemplate content={ legalPagesContent["howToShopPage"] }/>
+        return <FooterPageTemplate content={ legalPagesContent["howToShopPage"] } onLangChange={ this.props.onLangChange } lang={ this.props.lang }/>
     }    
 }
 
 class ShippingPage extends Component {
     render() {
-        return <FooterPageTemplate content={ legalPagesContent["shippingPage"] }/>
+        return <FooterPageTemplate content={ legalPagesContent["shippingPage"] } onLangChange={ this.props.onLangChange } lang={ this.props.lang }/>
     }    
 }
 
 class PaymentPage extends Component {
     render() {
-        return <FooterPageTemplate content={ legalPagesContent["paymentPage"] }/>
+        return <FooterPageTemplate content={ legalPagesContent["paymentPage"] } onLangChange={ this.props.onLangChange } lang={ this.props.lang }/>
     }   
 }
 

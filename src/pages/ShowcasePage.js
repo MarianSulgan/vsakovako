@@ -13,7 +13,7 @@ class ShowcasePage extends Component {
     state = {  }
     render() {
         return (
-            <Layout>
+            <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
                 <Grid>
                     <Row>
                         <h1>Všakovaké obrázky sa už vygeneruvali!</h1>

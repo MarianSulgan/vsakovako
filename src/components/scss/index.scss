@@ -57,12 +57,32 @@ html, body, #root, #outerContainer {
   flex: 1;
 }
 
+.btn-toolbar>.btn {
+  float: none;
+}
+
+#applicationPage {
+
+  div.product-images {
+    padding: 1.6em 0 3.2em 0;
+
+    a {
+      // @include remove-effects();
+    }
+  }
+
+}
+
 footer {
   background: $brand-primary;
   color: white;
   padding: 1em 0;
   text-align: center;
   position: relative;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 1em;
+  }
 
   &::before{
     @include before-triangle();
@@ -90,6 +110,10 @@ footer {
   .row {
     margin-top: 1.6em;
   }
+
+  .social > span {
+    padding: 0 1em;
+  }
 }
 
 section {
@@ -106,7 +130,8 @@ section {
 }
 
 #showcaseSection {
-  height: calc(100vh - 1em);
+  height: auto;
+  min-height: calc(100vh - 1em);
 }
 
 .misc-pages-section {
@@ -135,7 +160,7 @@ section {
   padding-top: 8em;
 }
 
-section:nth-child(even) {
+#homePage section:nth-child(odd) {
   background-color: $gray-lighter;
 }
 
@@ -149,7 +174,7 @@ section:nth-child(even) {
   margin: 0 auto;
 
   img {
-    margin: 10px 0;
+    margin: 10px auto;
   }
 }
 
@@ -159,6 +184,10 @@ section:nth-child(even) {
     margin-top: 6.4rem;
     opacity: 0.5;
   }
+}
+
+.lang-selector {
+  min-width: 4em;
 }
 
 /* Buttons */

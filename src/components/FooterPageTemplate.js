@@ -9,19 +9,15 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-import Navigation from './Navigation';
-import Footer from './Footer';
 import SideNavigation from './SideNavigation';
+import Layout from './Layout';
 
 class FooterPageTemplate extends Component {
     
     render() {
 
         return (
-            <div className="page-wrapper footer-binder">
-                
-                <Navigation/>
-                
+            <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
                 <Grid className="content">
                     <Row>
                         <Col xs={ 12 } sm={ 4 } >
@@ -42,10 +38,7 @@ class FooterPageTemplate extends Component {
                         </Col>
                     </Row>
                 </Grid>
-
-                <Footer/>
-
-            </div>
+            </Layout>
         );
     }
 }

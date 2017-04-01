@@ -14,16 +14,16 @@ class NotFoundPage extends Component {
 
   render() {
     return (
-        <Layout>
-                <Grid>
-                    <Row>
-                        <h1>Stránka sa nenašla. Bé.</h1>
-                        <p>
-                            Proste 404. Klasika. Zlý odkaz, ic dakam <Link to="/">naspáteček</Link>.
-                        </p>
-                    </Row>
-                </Grid>
-            </Layout>
+        <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
+            <Grid>
+                <Row>
+                    <h1>Stránka sa nenašla. Bé.</h1>
+                    <p>
+                        Proste 404. Klasika. Zlý odkaz, ic dakam <Link to="/">naspáteček</Link>.
+                    </p>
+                </Row>
+            </Grid>
+        </Layout>
     );
   }
 }
