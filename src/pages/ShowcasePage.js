@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Grid } from 'react-bootstrap';
 
 import Layout from '../components/Layout';
 
@@ -13,12 +13,10 @@ class ShowcasePage extends Component {
     state = {  }
     render() {
         return (
-            <Layout fluid={ false }>
-                <Row className="top-buffer text-center">
-                    <h2>Všakovaké obrázky sa už vygeneruvali!</h2>
-                </Row>
-                <Row className="top-buffer text-center">
-                    <Col xsOffset={ 3 } xs={ 6 }>
+            <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
+                <Grid>
+                    <Row>
+                        <h1>Všakovaké obrázky sa už vygeneruvali!</h1>
                         <p>
                             Lorem ipsum dolor sit amet, 
                             consectetuer adipiscing elit. 
@@ -33,8 +31,8 @@ class ShowcasePage extends Component {
                             Proin quam nisl, tincidunt et, mattis 
                             eget, convallis nec, purus. 
                         </p>
-                    </Col>
-                </Row>
+                    </Row>
+                </Grid>
             </Layout>
         );
     }

@@ -3,44 +3,37 @@
  * 
  * Component that wraps each page in application ensuring
  * that the same layout and principles are used all across the app.
+ * 
+ * @todo: uninstall 'react-burger-menu'
  */
-
 
 import React, { Component } from 'react';
-import { push as Menu } from 'react-burger-menu';
-import { browserHistory } from 'react-router';
-import { Grid, Button, Glyphicon } from 'react-bootstrap';
-import { Link } from 'react-router';
 
-import '../css/Layout.css';
-
-/**
- * See typography.js from more info on usage.
- */
-// import { TypographyStyle } from 'react-typography';
-// import typography from './typography';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 class Layout extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            defaultLang: "sk",
+            langs: ["sk", "en"]
+        }
+    }
+
     render() {
         return(
-            <div id="outerContainer">
-                <Menu right outer pageWrapId={ "pageWrap" } outerContainerId={ "outerContainer" } >
-                    <a id="home" className="menu-item" href="#">Domov</a>
-                    <a id="about" className="menu-item" href="#">Čo je to?</a>
-                    <a id="contact" className="menu-item" href="#">Kontakt</a>
-                </Menu>
-                <Button bsSize="large" id="backButton" className="pull-left" onClick={ browserHistory.goBack }>
-                    <Glyphicon glyph="arrow-left"/>
-                </Button>
-                <Grid fluid={ this.props.fluid } id="pageWrap">
-                    <h1 className="text-center margin-bottom">
-                        <Link to="/" className="unstyled">
-                        všakovako generátor
-                        </Link>
-                    </h1>
+            <div className="main-container footer-binder">
+
+                <Navigation onLangChange={ this.props.onLangChange } lang={ this.props.lang } />
+
+                <div className={ this.props.className ? `content ${this.props.className}` : "content" } id={ this.props.id }>
                     {this.props.children}
-                </Grid>
+                </div>
+
+                 <Footer/>
+                 
             </div>
         );
     }

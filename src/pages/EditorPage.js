@@ -9,25 +9,48 @@
 // @flow
 
 import React, { Component } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Grid, Col } from 'react-bootstrap';
+import { Link } from 'react-router';
 
-import SVGCanvas from '../components/SVGCanvas';
+// import SVGCanvas from '../components/SVGCanvas';
 import Layout from '../components/Layout';
+import strings from '../translations.js';
+import SideNavigation from '../components/SideNavigation';
 
 class App extends Component {
 
   render() {
 
-    let options = {
-      w: 100,
-      h: 100
-    };
+    const lastRowStyle = {
+        paddingBottom: 3.2 + 'em'
+    }
+
+    // let options = {
+    //   w: 100,
+    //   h: 100
+    // };
 
     return (
-      <Layout fluid={ true }>
-          <Row className="height-80">
-            <SVGCanvas options={ options } />
-          </Row>
+      <Layout onLangChange={ this.props.onLangChange } lang={ this.props.lang }>
+        <section className="full-section">
+          <Grid id="editorPage" className="app-flow-page">
+            <Row className="">
+                <Col xs={3} sm={2}>
+                    <SideNavigation indicatorNumber={ 3 }/>
+                </Col>
+                <Col xs={9} sm={10}>
+                  <Row>
+                    {/*<SVGCanvas options={ options } />*/}
+                  </Row>
+                </Col>
+            </Row>
+            <Row style={ lastRowStyle } className="text-center">
+                <Link to="/export-pattern">
+                    {strings.done}
+                </Link>
+            </Row>
+          </Grid>
+        </section>
       </Layout>
     );
   }

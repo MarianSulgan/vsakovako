@@ -4,7 +4,7 @@ SVG working canvas component
 
 import React, { Component } from 'react';
 import FileSaver from 'file-saver';
-import ReactResizeDetector from 'react-resize-detector';
+// import ReactResizeDetector from 'react-resize-detector';
 
 import SVGElement from './SVGElement';
 import SVGPattern from './SVGPattern';
@@ -123,12 +123,12 @@ class SVGCanvas extends Component {
         return (
             <div id="svgCanvas" onKeyPress={ this.handleKeyPress } >
             
-                {/* Used to detect resize event on #svgCanvas element */}
+                {/* Used to detect resize event on #svgCanvas element 
                 <ReactResizeDetector
                     handleHeight
                     handleWidth 
                     onResize={ this.onResize } 
-                />
+                />*/}
 
                 {/* Actual svg content */}
                 <SVGElement id="svg-element-1" width={ this.state.width } height={ this.state.height } ref={ (SVGElement) => this.svg = SVGElement }>
