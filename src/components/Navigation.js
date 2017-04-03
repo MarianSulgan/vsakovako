@@ -29,7 +29,7 @@ class Navigation extends Component {
                 <Navbar.Collapse>
 
                     <Nav pullRight>
-                        <LinkContainer to="/pick-application"><NavItem>{ strings.nav_create }</NavItem></LinkContainer>
+                        <LinkContainer to="/pick-application-option"><NavItem>{ strings.nav_create }</NavItem></LinkContainer>
                         <LinkContainer to="/about-project"><NavItem>{ strings.nav_about }</NavItem></LinkContainer>
                         <LinkContainer to="/contact"><NavItem>{ strings.nav_contact }</NavItem></LinkContainer>
                         <LinkContainer to="/login"><NavItem>{ strings.nav_login }</NavItem></LinkContainer>

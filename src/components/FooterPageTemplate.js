@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-import SideNavigation from './SideNavigation';
+import FooterSideNavigation from './FooterSideNavigation';
 import Layout from './Layout';
 
 class FooterPageTemplate extends Component {
@@ -21,7 +21,7 @@ class FooterPageTemplate extends Component {
                 <Grid className="content">
                     <Row>
                         <Col xs={ 12 } sm={ 4 } >
-                            <SideNavigation/>
+                            <FooterSideNavigation/>
                         </Col>
                         <Col xs={ 12 } sm={ 8 } >
                         { 

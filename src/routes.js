@@ -15,6 +15,7 @@ import ApplicationPage from './pages/ApplicationPage';
 import ExportPage from './pages/ExportPage';
 import ShowcasePage from './pages/ShowcasePage';
 import StyleguidePage from './pages/StyleguidePage';
+import LoginPage from './pages/LoginPage';
 import { ConditionsPage, PrivacyPage, ReturnPage, HowToShopPage, ShippingPage, PaymentPage } from './pages/LegalPages';
 
 import { withLanguage } from './components/withLanguage';
@@ -32,6 +33,9 @@ const routes = (
         <Route path="pick-application-option" component={ withLanguage(ApplicationPage) }/>
         <Route path="export-pattern" component={ withLanguage(ExportPage) }/>
         <Route path="showcase" component={ withLanguage(ShowcasePage) }/>
+
+        {/* Navigation in top menu */}
+        <Route path="login" component={ withLanguage(LoginPage) }/>
         
         {/* Misc static pages located in footer */}
         <Route path="styleguide" component={ withLanguage(StyleguidePage) }/>
